@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        .contenedor{
+            margin-bottom: 20px;
+            background-color: #454545;
+            color: #fff;
+        }
+        .contenedor > div{
+            padding: 15px 20px;
+        }
+        .contenedor > div > code{
+            color: #fff;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a href="../index.html" class="navbar-brand mb-0 h1">Volver</a>
+        </div>
+      </nav>
+      <div class="container ">
+        <h4>Eventos</h4>
+        <hr>    
+        <div class="row my-5">
+            <div class="col">
+
+                <h2>Eventos Document</h2>
+                <h4>DOMContentLoaded</h4>
+                <p>Es un evento que es ejecutado una vez descargado todo el HTML.</p>
+                <div class="contenedor">
+                    <div>
+                        <code>
+                            document.addEventListener('DOMContentLoaded', () =>{ <br>
+                                console.log(2) <br>
+                            })
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Eventos click</h2>
+        <div class="row my-5">
+            <div class="col">
+                <h4>Click</h4>
+                <hr>
+                <div class="contenedor">
+                    <div>
+                        <code>
+                            nav.addEventListener('click', ()=> {<br>
+                            console.log('Hello World') <br>
+                            })
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col">
+                <h4>Mouseenter</h4>
+                <p>Mouse sobre un elemento.</p>
+                <hr>
+                <div class="contenedor">
+                    <div>
+                        <code>
+                            nav.addEventListener('mouseenter', ()=> {<br>
+                            console.log('Hello World') <br>
+                            })
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col">
+                <h4>Mouseout</h4>
+                <p>Mouse deja de estar sobre un elemento.</p>
+                <hr>
+                <div class="contenedor">
+                    <div>
+                        <code>
+                            nav.addEventListener('mouseout', ()=> {<br>
+                            console.log('Hello World') <br>
+                            })
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col">
+                <h4>Mousedown</h4>
+                <p>Se ejecuta cuando mantenemos el click en un elemento.</p>
+                <hr>
+                <div class="contenedor">
+                    <div>
+                        <code>
+                            nav.addEventListener('mousedown', ()=> {<br>
+                            console.log('Hello World') <br>
+                            })
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col">
+                <h4>Mouseup</h4>
+                <p>Se ejecuta levantamos el click.</p>
+                <hr>
+                <div class="contenedor">
+                    <div>
+                        <code>
+                            nav.addEventListener('mouseup', ()=> {<br>
+                            console.log('Hello World') <br>
+                            })
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col">
+                <h4>Dblclick</h4>
+                <p>Se ejecuta cuando ahcemos doble click.</p>
+                <hr>
+                <div class="contenedor">
+                    <div>
+                        <code>
+                            nav.addEventListener('dblclick', ()=> {<br>
+                            console.log('Hello World') <br>
+                            })
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Eventos con el teclado</h2>
+        <div class="row my-5">
+            <div class="col">
+                <h4>Keydown</h4>
+                <p>Se ejecuta cuando precionas una tecla.</p>
+                <hr>
+                <div class="contenedor">
+                    <div>
+                        <code>
+                            input.addEventListener('Keydown', () => {<br>
+                                console.log('Escribiendo..')<br>
+                            })
+                        </code>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li>keyup = soltar tecla.</li>
+                <li>blur = click al input.</li>
+                <li>copy = Se ejecuta cuando haemos Ctrl + c.</li>
+                <li>paste = Se ejecuta cuando haemos Ctrl + v.</li>
+                <li>cut = Se ejecuta cortamos Ctrl + x.</li>
+                <li>input = Cumple las mismas funciones que las anteriores, exepto el blur.</li>
+            </ul>
+        </div>
+        <div class="row my-5">
+            <div class="col">
+                <h4>Target</h4>
+                <p></p>
+                <hr>
+                <div class="contenedor">
+                    <div>
+                        <code>
+                            input.addEventListener('input', (e) => {<br>
+                                console.log(e.target.value)<br>
+                            })
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Eventos que suceden en un Formulario</h2>
+        <div class="row my-5">
+            <div class="col">
+                <h4>Submit</h4>
+                <p>Sucede cuando ejecutamos submit a un Formulario.</p>
+                <p>e.preventDefault resetea la ejecucion por defecto de recargar el sitio web</p>
+                <hr>
+                <div class="contenedor">
+                    <div>
+                        <code>
+                            input.addEventListener('submit', (e) => {<br>
+                                e.preventDefault()<br>
+                            console.log()<br>
+                            })
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Eventos que seceden con el scroll</h2>
+        <div class="row my-5">
+            <div class="col">
+                <h4>scroll</h4>
+                <p>Detectando la cantidad de scroll en vertical basado en pixeles.</p>
+                <hr>
+                <div class="contenedor">
+                    <div>
+                        <code>
+                            window.addEventListener('scroll', () => {<br>
+                            const scrollPX = window.scrollY;<br>
+                            console.log(scrollPX)<br>
+                            })
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col">
+                <h4>scroll and getBoundingClientRect()</h4>
+                <p>Detectando la cantidad de scroll en vertical basado en pixeles.</p>
+                <hr>
+                <div class="contenedor">
+                    <div>
+                        <code>
+                            window.addEventListener('scroll', () => {<br>
+                             const section = document.queryselector('.section')<br>
+                            const ubication = section.getboundingClientRect();<br>
+                            if(ubication.top < 784){<br>
+                                console.log('El elemento ya esta visible.')<br>
+                            }else{<br>
+                            console.log('Aun no, da mas scroll.')<br>
+                            } <br>
+                            })
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Event Bubbling</h2>
+        <div class="row my-5">
+            <div class="col">
+                <h4>stopPropagation</h4>
+                <p>Detiene la ejecucion de eventos tipo burbuja</p>
+                <p>Esto sucede cuando hacemos click en un elemento hijo que tiene un evento click y su padre tambien, ejecutanto asi los dos eventos click.</p>
+                <p>para evitar la propagacion de los eventos utilizamos stopPropagation.</p>
+
+                <hr>
+                <div class="contenedor">
+                    <div>
+                        <code> 
+                            cardDiv.addEventListener('click', ()=> { <br>
+                                e.stopPropagation();<br>
+                                console.log('click en div');<br>
+                            }) <br>
+                            <br>
+                            infoDiv.addEventListener('click', ()=> { <br>
+                                e.stopPropagation();<br>
+                                console.log('click en div');<br>
+                            }) <br>
+                            <br>
+                            tituloDiv.addEventListener('click', ()=> { <br>
+                                e.stopPropagation();<br>
+                                console.log('click en div');<br>
+                            }) <br>
+                        </code>
+                    </div>
+                </div>
+                <h4>if</h4>
+                <p>Otra manera para el stop propagation es con if/ condicionales</p>
+                <p>ejemplo</p>
+                <div class="contenedor">
+                    <div>
+                        <code>
+                            cardDiv.addEventListener('click', e => { <br>
+                            if(e.target.classList.contains('titulo')){<br>
+                            console.log('diste click en titulo')}<br>
+                            }) <br>
+                            <br>
+                            cardDiv.addEventListener('click', e => { <br>
+                            if(e.target.classList.contains('precio')){<br>
+                            console.log('diste click en precio')}<br>
+                            }) <br>
+                            <br>
+                            cardDiv.addEventListener('click', e => { <br>
+                            if(e.target.classList.contains('card')){<br>
+                            console.log('diste click en card')}<br>
+                            }) <br>
+                            <br>
+                        </code>
+                    </div>
+                </div>
+                <h4>Onclick</h4>
+                <p>Y oclick seria la tercera manera de evitar la propagacion de eventos mediante un metodo, con un HTML generado desde javaScript.</p>
+            </div>
+        </div>
+        <h4>¿Como ver la etiqueta del elemento que le estamos dando click?</h4>
+        <div class="row my-5">
+            <div class="col">
+                <h4>Event Target</h4>
+                <hr>
+                <div class="contenedor">
+                    <div>
+                        <code>
+                            cardDiv.addEventListener('click', () =>{ <br> 
+                            console.log(e.target)<br>
+                            })
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4>¿Como ver la clase de un elemento mediante un click?</h4>
+        <div class="row my-5">
+            <div class="col">
+                <h4>Event Target ClassList</h4>
+                <hr>
+                <div class="contenedor">
+                    <div>
+                        <code>
+                            cardDiv.addEventListener('click', () =>{ <br> 
+                            console.log(e.target.classList)<br>
+                            })
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
